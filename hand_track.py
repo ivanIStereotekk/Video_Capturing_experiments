@@ -9,7 +9,7 @@ hands = mpHands.Hands() # Модель рекогнайзера - руки (ctr+
 mpDraw = mp.solutions.drawing_utils # Рисовалка точек
 while True:
     success,img = cap.read()
-    imgRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB) # переобразовали ГБР--РГБ
+    imgRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB) # переобразовали RGB >> GBR
     results = hands.process(imgRGB)
 
     if results.multi_hand_landmarks: # Если hand_process(result) имеет метки
